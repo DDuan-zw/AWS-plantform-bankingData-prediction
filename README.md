@@ -33,11 +33,13 @@ Again, the advantage by doing so is sharing our processed data with others in At
 
 The model is built by XGboost Algorithm which is popular right now. Rather than extract data from S3, the code import data from Feature Store we build before to mimic team work scenario, it make sence since we will hard get a chance to work on individual task.
 ![image](https://user-images.githubusercontent.com/64514218/159201656-1d71033c-13db-49af-a1e2-2ca7c080fd66.png)
-After training the model, deploys our trained model to a real-time endpoint. Hoting the trained model allows us to make inferences against it. 
+After training the model, deploys our trained model to a real-time endpoint. Hoting the trained model allows us to make inferences against it. Then, we can check it in Sagemaker endpoint.
 ```Python
 xgb_predictor = xgb.deploy(initial_instance_count=1,
                            instance_type='ml.m4.xlarge') 
-```                         
+```    
+![image](https://user-images.githubusercontent.com/64514218/159202866-4471e981-b4b6-4667-a91a-31475fdb16f3.png)
+
 Using the ```xgb_predictor``` we defined to predict test dataset, its performance evaluation as follow, and the weighted F-1 Score is 0.8718576186783866.
 |predictions	|0|1|
 |:---|:---|:---|
