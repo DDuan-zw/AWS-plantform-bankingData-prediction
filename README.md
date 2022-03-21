@@ -1,4 +1,4 @@
-# AWS-plantform-bankingData-prediction
+# AWS-platform-bankingData-prediction
 AWS-SageMaker Studio-Data WareHouse-Pipeline-S3-Athena
 
 This is a personal project for practice only, I learn these techniques from AWS workshop for perosonal improvement. It builds workflow in Sagemaker Studio and deploys a XGboost model as inference. The datasets are stored S3, after prepoccessing by Data Wrangler, transformed into SageMaker Feature Store to store, retrieve, and share machine learning (ML) features(in group working).
